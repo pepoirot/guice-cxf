@@ -4,7 +4,7 @@
 
 	<groupId>com.google.code.inject</groupId>
 	<artifactId>guice-cxf</artifactId>
-	<version>0.2-SNAPSHOT</version>   
+	<version>0.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
   <url>https://github.com/jakub-bochenski/guice-cxf</url>
@@ -69,8 +69,15 @@
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
-			<version>2.5.2</version>
-		</dependency> 
+			<version>2.7.18</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 </project>

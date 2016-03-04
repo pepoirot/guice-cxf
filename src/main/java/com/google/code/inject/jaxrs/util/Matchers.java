@@ -49,14 +49,14 @@ public final class Matchers {
 			@Override
 			public boolean matches(Method m) {
 				return isResourceMethod(m)
-						&& getAnnotatedMethod(m).getAnnotation(annotation) != null;
+						&& getAnnotatedMethod(m.getDeclaringClass(), m).getAnnotation(annotation) != null;
 
 			}
 		};
 	}
 
 	private static boolean isResourceMethod(Method m) {
-		final Method annotatedMethod = getAnnotatedMethod(m);
+		final Method annotatedMethod = getAnnotatedMethod(m.getDeclaringClass(), m);
 
 		final int mod = m.getModifiers();
 		if (!isPublic(mod) || isStatic(mod))
